@@ -31,6 +31,7 @@ export default function Home({blogs,login_data,login}) {
     },[])
     return ( 
    <>
+   
        <Hero/>
     <BlogSection blogs={blogs} text={true} login={login}/>
    </>
