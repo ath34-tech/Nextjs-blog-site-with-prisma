@@ -1,34 +1,73 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Modern blog site with nextjs and prisma
 
-First, run the development server:
+I made a blog site using nextjs in frontend and prisma for connecting with database.
+I use sqlite database in this project.
+I am planning to add some more features to this project in future.
+
+
+
+
+## Run Locally
+
+Clone the project
 
 ```bash
-npm run dev
-# or
-yarn dev
+  git clone https://github.com/ath34-tech/Nextjs-blog-site-with-prisma.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Go to the project directory
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```bash
+  cd moderndesign-blog
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Install dependencies
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```bash
+  npm install
+```
 
-## Learn More
+Start the server
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+  npm run dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Features
 
-## Deploy on Vercel
+- Made with nextjs
+- Login and signup feature
+- Used prisma
+- Add to favourite(in next release)
+- Add to collection(in release)
+- dynamic blog page links
+- used cookies for persistence storage
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+## Tech Stack
+
+**Client:** Nextjs and chakra-ui
+
+**Server:** Nextjs and prisma
+
+
+## 🚀 About Me
+I'm a full stack developer. I can make web apps, mobile apps,backend,i can also do database stuff. I also do software developement using PyQt5 and PySide2. I also do game developement some time using unity and C#.
+
+I want to freelancing,open source contribution and technical writting.
+
+My medium profile:https://athtripathi.medium.com/
+
+## 🛠 Skills
+
+- **Web Developement:** ReactJS,NextJS,Javascript, HTML,CSS,Django,nodeJS,ThreeJS,GraphQL
+
+- **App Developement:** React native
+
+- **Software Developement:** Python and C#
+
+These are some skills that i have for knowing more visit my profile: [My github!](https://github.com/ath34-tech)
