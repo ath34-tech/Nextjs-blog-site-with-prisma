@@ -22,17 +22,17 @@ import parseCookies from '../helpers'
 //     data:{blogs:{set:favourite_collection.blog.push(blog)}}
 //   })
 // }
-export default function Home({blogs,content}) {
+export default function Home({blogs,login_data,login}) {
 
   const {data,setData}=React.useContext(AppContext)
     React.useEffect(()=>{
-      setData(content)
+      setData(login_data)
 
     },[])
     return ( 
    <>
        <Hero/>
-    <BlogSection blogs={blogs} text={true}/>
+    <BlogSection blogs={blogs} text={true} login={login}/>
    </>
     )
 }
@@ -52,17 +52,20 @@ export async function getServerSideProps({req, res}) {
     //   }
     // })
     // Login
-    let content={}
+    let login_data={}
+    var login_status=false
     if(cookie.login!=null && cookie.login==='true'){
-      content={"login":true,"user_name":cookie.user_name,"user_id":cookie.user_id}
+      login_data={"login":true,"user_name":cookie.user_name,"user_id":cookie.user_id}
+      login_status=true
     }
     else{
-      content={"login":false,"user_name":"","user_id":null}
+      login_data={"login":false,"user_name":"","user_id":null}
     }
     return {
       props:{
         blogs,
-        content
+        login_data,
+        login:login_status,
       }
     }
   }

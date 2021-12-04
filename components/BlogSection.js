@@ -1,7 +1,7 @@
 import BlogCard from "./BlogCard"
 import { Text,Flex } from "@chakra-ui/react"
 
- function BlogSection({blogs,text}){
+ function BlogSection({blogs,text,login}){
     // props.blogList!==null?props.blogList['data']:
     const blog_lists=blogs
     return (
@@ -14,14 +14,19 @@ import { Text,Flex } from "@chakra-ui/react"
         <Flex p="7" wrap="wrap" justifyContent="space-between">
         {
         blog_lists.map((blog,key)=>{
-            const tags=[]
+            var tags=[]
+            try{
             var tag = eval('(' + blog.tags + ')');
             for (var i in tag)
             {
               tags.push(tag[i]);
             }
+        }
+        catch{
+            tags=[]
+        }
             return(
-            <BlogCard key={key} id={blog.id} badgeList={tags} imageUrl={`${blog.image}`} title={`${blog.title}`} synopsis={`${blog.description}`}/>
+            <BlogCard key={key} login={login} id={blog.id} badgeList={tags} imageUrl={blog.image===""?"https://picsum.photos/400/200":`${blog.image}`} title={`${blog.title}`} synopsis={`${blog.description}`}/>
             )
         })
     }

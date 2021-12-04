@@ -32,7 +32,10 @@ export default function BlogCard(props){
               </Tooltip>
               <Tooltip hasArrow label="Favourite" bg="black" color="white">
               <StarIcon  width={5} height={5} mr={3} mt={2} onClick={()=>{
+                if(props.login){
                 SetFav(!isFav)
+                }
+                else{}
                 // AddToFavourite(props.id,cookies.favourite_id)
               }
                 }  color={isFav?"yellow":"black"}/>
